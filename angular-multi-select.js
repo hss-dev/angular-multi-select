@@ -960,7 +960,6 @@ angular.module( 'multi-select', ['ng'] ).directive( 'multiSelect' , [ '$sce', '$
                 $scope.lang.selectAll       = $sce.trustAsHtml( $scope.icon.selectAll  + 'Select All' );                
                 $scope.lang.selectNone      = $sce.trustAsHtml( $scope.icon.selectNone + 'Select None' );
                 $scope.lang.reset           = $sce.trustAsHtml( $scope.icon.reset      + 'Reset' );
-                $scope.lang.search          = 'Search...';
                 $scope.lang.nothingSelected = 'None Selected';                
             }
             $scope.icon.tickMark = $sce.trustAsHtml( $scope.icon.tickMark );
@@ -1090,12 +1089,12 @@ angular.module( 'multi-select', ['ng'] ).directive( 'multiSelect' , [ '$sce', '$
                     '<div class="acol">'+
                         '<label>'+                                
                             // input, so that it can accept focus on keyboard click
-                            '<input id="multiple-select-{{$index}}-test" class="checkbox focusable" type="checkbox" '+
+                            '<input class="checkbox focusable" type="checkbox" '+
                                 'ng-disabled="itemIsDisabled( item )" '+
                                 'ng-checked="item[ tickProperty ]" '+
                                 'ng-click="syncItems( item, $event, $index )" />'+
                             // item label using ng-bind-hteml
-                            '<span '+
+                            '<span id="multiple-select-{{$index}}-test"'+
                                 'ng-class="{disabled:itemIsDisabled( item )}" '+
                                 'ng-bind-html="writeLabel( item, \'itemLabel\' )">'+
                             '</span>'+
