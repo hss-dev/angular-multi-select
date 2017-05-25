@@ -1,6 +1,6 @@
 {
     "name": "angular-multiselect",
-    "version": "4.0.0-8",
+    "version": "4.0.0-9",
     "description": "A multi select dropdown directive for AngularJS",
     "main": "angular-multi-select.js",
     "repository": {
